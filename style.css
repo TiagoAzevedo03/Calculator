@@ -1,0 +1,19 @@
+html {
+    font-size: 100px;
+    color:white;
+}
+
+#visor{
+    margin-right: 1660px;
+    background-color: grey;
+    padding-top: 100px;
+}
+
+#num {
+    background-color: yellow;
+    color: black
+}
+
+#button {
+    background-color: black;
+}
