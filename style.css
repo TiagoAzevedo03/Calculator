@@ -6,11 +6,12 @@ html {
 #visor{
     margin-top: 10px;
     width: 24.75%;
+    padding-top: 100px;
     background-color: grey;
-    padding-top: 166px;
     margin-left:10px;
     margin-right: 10px;
     border: 2px solid black;
+    text-align: right;
 }
 
 .num {
@@ -20,6 +21,8 @@ html {
 }
 
 .button {
+    width: 100%;
+    height: 100%;
     border: 2px solid grey;
     background-color: orange;
 }
@@ -33,6 +36,7 @@ table {
 }
 
 td {
+    height: 100%;
     text-align: center;
     padding:10px;
 }

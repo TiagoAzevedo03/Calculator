@@ -3,44 +3,42 @@
     <head>
         <title>Calculator</title>
         <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
+        <script src="script.js" defer></script>
     </head>
 
 
     <body>
-        <div id = "visor">
-
-        </div>
+        <div id = "visor">0</div>
         <table>
             <tr>
-                <td class = "button" id = "sqrt">&Sqrt;</td>
-                <td class = "button" id = "perc">%</td>
-                <td class = "button" id = "pow">^2</td>
-                <td class = "button" id = "C">C</td>
+                <td class = "button"><button onclick = "op('sqrt')">&Sqrt;</button></td>
+                <td class = "button"><button onclick = "op('%')">%</td>
+                <td class = "button"><button onclick = "op('pow')">^2</td>
+                <td class = "button"><button onclick = "op('C')">C</td>
             </tr>
             <tr>
-                <td class = "num" id = "1">1</td>
-                <td class = "num" id = "2">2</td>
-                <td class = "num" id = "3">3</td>
-                <td class = "button" id = "div">/</td>
+                <td class = "num"><button onclick = "number(1)">1</button></td>
+                <td class = "num"><button onclick = "number(2)">2</button></td>
+                <td class = "num"><button onclick = "number(3)">3</button></td>
+                <td class = "button"><button onclick = "op('/')">/</button></td>
             </tr>
             <tr>
-                <td class = "num" id = "4">4</td>
-                <td class = "num" id = "5">5</td>
-                <td class = "num" id = "6">6</td>
-                <td class = "button" id = "x">X</td>
+                <td class = "num"><button onclick = "number(4)">4</button></td>
+                <td class = "num"><button onclick = "number(5)">5</button></td>
+                <td class = "num"><button onclick = "number(6)">6</button></td>
+                <td class = "button"><button onclick = "op('x')">X</td>
             </tr>
             <tr>
-                <td class = "num" id = "7">7</td>
-                <td class = "num" id = "8">8</td>
-                <td class = "num" id = "9">9</td>
-                <td class = "button" id = "minus">-</td>
+                <td class = "num"><button onclick = "number(7)">7</button></td>
+                <td class = "num"><button onclick = "number(8)">8</button></td>
+                <td class = "num"><button onclick = "number(9)">9</button></td>
+                <td class = "button"><button onclick = "op('-')">-</td>
             </tr>
             <tr>
-                <td class = "num" id = "0">0</td>
-                <td class = "button" id = "dot">.</td>
-                <td class = "button" id = "equal">=</td>
-                <td class = "button" id = "plus">+</td>
+                <td class = "num"><button onclick = "number(0)">0</button></td>
+                <td class = "button"><button onclick = "op('sqrt')">.</button></td>
+                <td class = "button"><button onclick = "op('=')">=</button></td>
+                <td class = "button"><button onclick = "op('+')">+</button></td>
             </tr>
         </table>
     </body>
