@@ -22,13 +22,13 @@ const op = (a) => {
         atual += '.';
     }
     else if (a == 'sqrt'){
-        atual = Math.sqrt(Number(atual));
+        primeiro = Math.sqrt(Number(primeiro));
      }
      else if (a == '%'){
-         atual = Number(atual)/100;
+         primeiro = Number(primeiro)/100;
      }
      else if (a == 'pow'){
-         atual = Number(atual)*Number(atual);
+         primeiro = Number(primeiro)*Number(primeiro);
      }
     else if (primeiro == -1 && atual != "0"){
         primeiro = Number(atual);
