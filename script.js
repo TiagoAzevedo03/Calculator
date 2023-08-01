@@ -1,5 +1,5 @@
 let atual = "0";
-let primeiro;
+let primeiro = -1;
 let operator;
 
 const number = (n) => {
@@ -10,36 +10,41 @@ const number = (n) => {
 }
 
 const op = (a) => {
-    if (a != '=' && a != 'sqrt' && a != '%' && a != 'C' && a != 'pow'){
-        primeiro = Number(atual);
-        atual = "";
-        operator = a;
-    }
-    if (a == 'sqrt'){
-       atual = Math.sqrt(Number(atual));
-    }
-    else if (a == '%'){
-        atual = Number(atual)/100;
-    }
-    else if (a == 'pow'){
-        atual = Number(atual)*Number(atual);
-    }
-    else if (a == 'C'){
+    if (a == 'C'){
         atual = "0";
-        primeiro = 0;
+        primeiro = -1;
     }
-    else if (a == '='){
+    else if (a == 'sqrt'){
+        atual = Math.sqrt(Number(atual));
+     }
+     else if (a == '%'){
+         atual = Number(atual)/100;
+     }
+     else if (a == 'pow'){
+         atual = Number(atual)*Number(atual);
+     }
+    else if (primeiro == -1 && atual != "0"){
+        primeiro = Number(atual);
+        operator = a; atual = "0";
+    }
+    else {
         if (operator == '+'){
-            atual = Number(atual) + primeiro;
+            primeiro = Number(atual) + primeiro;
         }
         else if (operator == '-'){
-            atual = primeiro - Number(atual);
+            primeiro = primeiro - Number(atual);
         }
         else if (operator == 'x'){
-            atual = Number(atual) * primeiro;
+            primeiro = Number(atual) * primeiro;
         }
         else if (operator == '/'){
-            atual = primeiro / Number(atual);
+            primeiro = primeiro / Number(atual);
+        }
+        atual = "0";
+        operator = a;
+        if (operator == '='){
+            atual = primeiro;
+            primeiro = -1;
         }
     }
     printText(Number(atual));
@@ -49,6 +54,6 @@ const op = (a) => {
 }
 
 function printText(str) {
-    if (atual == "") str = primeiro;
+    if (atual == "0" && primeiro != -1) str = primeiro;
     document.getElementById("visor").innerHTML = str;
 }
