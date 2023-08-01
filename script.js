@@ -12,6 +12,7 @@ const number = (n) => {
 const op = (a) => {
     if (a != '=' && a != 'sqrt' && a != '%' && a != 'C' && a != 'pow'){
         primeiro = Number(atual);
+        atual = "";
         operator = a;
     }
     if (a == 'sqrt'){
@@ -42,12 +43,12 @@ const op = (a) => {
         }
     }
     printText(Number(atual));
-    atual = "";
 
     console.log('Atual: ' + atual);
     console.log('Primeiro: ' + primeiro);
 }
 
 function printText(str) {
+    if (atual == "") str = primeiro;
     document.getElementById("visor").innerHTML = str;
 }
