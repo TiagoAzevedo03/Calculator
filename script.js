@@ -1,18 +1,25 @@
 let atual = "0";
 let primeiro = -1;
 let operator;
+let igual = false;
 
 const number = (n) => {
+    if (igual){ 
+        primeiro = -1;
+        igual = false;
+    }
     atual += n;
     printText(Number(atual));
-    console.log('Atual: ' + atual);
-    console.log('Primeiro: ' + primeiro);
 }
 
 const op = (a) => {
+    if (igual) igual = false;
     if (a == 'C'){
         atual = "0";
         primeiro = -1;
+    }
+    else if (a == 'dot'){
+        atual += '.';
     }
     else if (a == 'sqrt'){
         atual = Math.sqrt(Number(atual));
@@ -43,14 +50,10 @@ const op = (a) => {
         atual = "0";
         operator = a;
         if (operator == '='){
-            atual = primeiro;
-            primeiro = -1;
+            igual = true;
         }
     }
     printText(Number(atual));
-
-    console.log('Atual: ' + atual);
-    console.log('Primeiro: ' + primeiro);
 }
 
 function printText(str) {

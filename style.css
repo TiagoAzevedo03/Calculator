@@ -6,7 +6,7 @@ html {
 #visor{
     margin-top: 10px;
     width: 24.75%;
-    padding-top: 100px;
+    padding-top: 75px;
     background-color: grey;
     margin-left:10px;
     margin-right: 10px;
@@ -21,8 +21,6 @@ html {
 }
 
 .button {
-    width: 100%;
-    height: 100%;
     border: 2px solid grey;
     background-color: orange;
 }
@@ -36,7 +34,17 @@ table {
 }
 
 td {
-    height: 100%;
     text-align: center;
-    padding:10px;
+}
+
+button {
+    width: fit-content;
+    height: fit-content;
+    padding: 0;
+    border: none;
+    background: none;
+    text-decoration: none;
+    font-size: 70px;
+    background-color: inherit;
+    color: inherit;
 }
